@@ -4,6 +4,7 @@
 			<button @click="to1" type="primary">点击跳转 - test1</button>
 			<button @click="to2" type="primary">点击跳转 - test2</button>
 			<button @click="toindex" type="primary">点击跳转 - index</button>
+			<button @click="to4()" type="primary">点击跳转 - test4</button>
 		</view>
 	</view>
 </template>
@@ -33,7 +34,13 @@
 				uni.switchTab({
 					url:'/pages/index/index',
 				})
-			}
+			},
+			to4()
+			{
+				uni.navigateTo({
+					url:'/pages/index/test4/test4'
+				})
+			},
 		}
 	}
 </script>
